@@ -1,0 +1,10 @@
+
+ESPORTARE DATABASE
+
+
+mysqldump -u root -p mysql user db tables_priv columns_priv procs_priv > users_and_privileges.sql
+
+
+
+/Applications/XAMPP/xamppfiles/bin/mysqldump -u root -p LCWEB_PORTFOLIO > create_tables_and_data_LCWEB_PORTFOLIO_24102025.sql
+

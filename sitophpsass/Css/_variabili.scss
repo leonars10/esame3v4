@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Ordina-Wide';
+    src: local('Ordina-Wide'), 
+    url('Font/Ordina/Ordina-Wide.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ordina-WideSemibold';
+    src: local('Ordina-WideSemibold'), 
+    url('Font/Ordina/Ordina-WideSemibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ordina-WideBold';
+    src: local('Ordina-WideBold'), 
+    url('Font/Ordina/Ordina-WideBold.ttf') format('truetype');
+}
+
+// Colori
+$color-black: #000;
+$color-white: #fff;
+$primary-color: #55DBCB;
+$color-secondary: #1c1c1c;
+
+// Font
+$font-family-default: 'Ordina', Helvetica, sans-serif;
+$font-family1: 'Ordina-Wide';
+$font-family2: 'Ordina-WideSemibold';
+$font-family3: 'Ordina-WideBold';
+// Layout
+$header-padding: 10px;
+$footer-padding: 20px;
+$sfondo-gradient: url('Sfondo/Sfondo.png');
+$border-radius-default: 5px;
+$gap-gallery: 30px;
+$border-radius: 5px;
+$gap-large: 30px;
+$gap-default: 20px;
+$transition-speed: 0.4s;
+$text-color: #fff;
+$link-hover-color: #555;
+$hamburger-size: 30px;
+$menu-width: 250px;
+$menu-width-mobile: 50px;
+$background-color: #000;
+
+

@@ -1,0 +1,331 @@
+/* ==== CSS Unificato (gestione progetti/servizi/utenti) ==== */
+
+/* Reset di base per layout fisso non responsive */
+body {
+    font-family: "Ordina", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    width: 1300px;               /* valore centrale tra 1000/1050/1100 */
+    margin: 0 auto;              /* centra il layout */
+    line-height: 1.6;
+}
+
+/* Header + link utility */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+.back-link, .logout-button {
+    position: absolute;
+    top: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+.back-link {
+    left: 20px;
+    background-color: #606060;
+    color: #ffffff;
+}
+.back-link:hover { background-color: #5a6268; }
+.logout-button {
+    right: 20px;
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.logout-button:hover { background-color: #c82333; }
+
+/* Contenitore pagina */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Titoli */
+h1 {
+    color: #55dbcb;
+    text-align: center;
+}
+h2 {
+    color: #000000;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+/* Messaggi */
+.message {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.message span {
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.message span[style*="color:red"] {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24 !important;
+}
+.message span[style*="color:green"] {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724 !important;
+}
+
+/* ===== Form dati (progetti) ===== */
+.data-form {
+    background-color: #e9ecef;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+.data-form .form-group { margin-bottom: 15px; }
+.data-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.data-form input[type="text"],
+.data-form input[type="url"],
+.data-form input[type="file"],
+.data-form textarea,
+.data-form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.data-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.data-form button {
+    background-color: #64ffed;
+    font-family: "Ordina", sans-serif;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.data-form button[type="reset"] {
+    background-color: #6c757d;
+    margin-left: 10px;
+}
+.data-form button:hover,
+.data-form button[type="reset"]:hover {
+    background-color: #55dbcb;
+}
+
+/* Anteprima immagine */
+.image-preview-container {
+    margin-top: 15px;
+    text-align: center;
+    border: 1px dashed #ced4da;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+.image-preview-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.image-preview-container p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* ===== Tabella dati (progetti) ===== */
+.data-table {
+    font-family: "Ordina", sans-serif;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+.data-table th, .data-table td {
+    border: 1px solid #dee2e6;
+    padding: 3px;
+    text-align: center;
+    vertical-align: middle;
+    /*font-size: 0.85em;*/
+}
+.data-table th {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 19px;
+}
+.data-table tr:nth-child(even) { background-color: #f2f2f2; }
+.data-table tr:hover { background-color: #e2e6ea; }
+
+.data-table .action-buttons a,
+.data-table .action-buttons button {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.data-table .action-buttons .edit-btn {
+    background-color: #ffc107;
+    color: #333333;
+}
+.data-table .action-buttons .edit-btn:hover { background-color: #e0a800; }
+.data-table .action-buttons .delete-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.data-table .action-buttons .delete-btn:hover { background-color: #c82333; }
+
+.data-table td.description {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+.data-table td.image-path,
+.data-table td.link-path,
+.data-table td.src-path {
+    font-family: 'Ordina', Courier, monospace;
+    font-size: 0.8em;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== Form utenti (servizi/utenti) ===== */
+.user-form {
+    font-family: "Ordina", sans-serif;
+    background-color: #e9ecef;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+.user-form .form-group { margin-bottom: 15px; }
+.user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.user-form input[type="text"],
+.user-form input[type="password"],
+.user-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.user-form button {
+    background-color: #64ffed;
+    color: #000000;
+    font-family: "Ordina", sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.user-form button[type="reset"] { margin-left: 10px; }
+.user-form button:hover,
+.user-form button[type="reset"]:hover {
+    background-color: #55dbcb;
+}
+
+/* ===== Tabella utenti (servizi/utenti) ===== */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.user-table th, .user-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: center;
+}
+.user-table th {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+.user-table tr:nth-child(even) { background-color: #f2f2f2; }
+.user-table tr:hover { background-color: #e2e6ea; }
+
+.user-table .action-buttons a,
+.user-table .action-buttons button {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+.user-table .action-buttons .edit-btn {
+    background-color: #ffc107;
+    color: #333333;
+}
+.user-table .action-buttons .edit-btn:hover { background-color: #e0a800; }
+.user-table .action-buttons .delete-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+.user-table .action-buttons .delete-btn:hover { background-color: #c82333; }
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Validazione (utenti) */
+.validation-message {
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.valid { color: green; }
+.invalid { color: red; }

@@ -1,0 +1,178 @@
+@import "variabili";
+@import "header";
+@import "footer";
+
+// Mixin
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-container($max-width: 1200px) {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease) {
+  transition: $property $duration $ease;
+}
+
+// Stile
+body {
+  background-color: $color-black;
+  color: $color-white;
+  font-family: $font-family3;
+  margin: 0;
+  padding: 0;
+}
+
+// Sfondo
+.sfondo {
+  background-image: url('Sfondo/Sfondo.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  @include flex-center(column, center, center);
+  text-align: center;
+
+  .sfondo-content {
+    h2 {
+      font-size: 3rem;
+      color: $color-white;
+    }
+  }
+}
+
+// Video 
+.video-section {
+  background-color: $color-black;
+  border-radius: $border-radius;
+  padding: 20px;
+  margin: 40px auto;
+  @include responsive-container(1200px);
+
+  .video-container {
+    overflow: hidden;
+    border-radius: $border-radius;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Progetti
+.projects-container {
+  @include responsive-container(1200px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-large;
+  justify-content: center;
+  padding: 10px;
+
+  .project-item {
+    position: relative;
+    flex: 0 0 auto;
+    overflow: hidden;
+    max-width: auto; 
+    box-sizing: border-box; 
+    border-radius: $border-radius;
+    max-width: calc(33.333% - 20px); 
+    box-sizing: border-box; 
+    border: 2px solid #1c1c1c; 
+    background-color: $primary-color; 
+
+    img {
+      width: 100%;
+      height: auto;
+      @include transition(opacity, 0.5s);
+      display: block;
+
+       &:hover {
+         transform: scale(1.05);
+       }
+    }
+
+    .project-name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $primary-color;
+        color: $color-black;
+        font-family: $font-family3;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+             
+            &:hover {
+               opacity: 1;
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: 1500px) {
+
+  .sfondo {
+    height: 300px;
+  }  
+
+  .projects-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      overflow-x: hidden;
+  }
+
+  .project-item {
+      width: 100% !important; 
+      max-width: 100vw !important; 
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none !important; 
+      background-color: transparent !important; 
+  }
+
+  .project-item img {
+      width: 100% !important; 
+      max-width: 100% !important;
+      height: auto !important;
+      object-fit: cover !important; 
+      display: block !important;
+  }
+
+  .project-name {
+      display: none !important;
+  }
+}
+
+// Media
+@media screen and (min-width: 1921px) {
+  .sfondo {
+    height: 300px;
+
+    .sfondo-content {
+      h2 {
+        font-size: 5rem;
+      }
+    }
+  } 
+}
+      

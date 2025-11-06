@@ -1,0 +1,60 @@
+
+
+io ho questo SASS:
+
+marco@Mac documenti_vari % sass --version
+1.89.0 compiled with dart2js 3.7.3
+
+
+
+* If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+  primary implementation: https://sass-lang.com/install
+
+
+  o meglio :
+
+  brew install sass/sass/sass
+
+  
+
+
+  OPPURE installare NVM e poi SASS :
+
+
+
+  ### come installare NVM su Mac
+# Per installare NVM (Node Version Manager) su Mac, puoi seguire questi passaggi:
+1. Apri il terminale.
+2. Esegui il seguente comando per scaricare e installare NVM:
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
+3. Dopo l'installazione, chiudi e riapri il terminale o esegui il seguente comando per caricare NVM:
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+```
+4. Verifica che NVM sia stato installato correttamente eseguendo:
+```bash
+nvm --version
+
+
+  npm install -g sass
+
+
+  Come utilizzare SASS :
+
+
+  andare nella directory dove sono i CSS ed effettuare il seguente commando:
+
+  Percompilare il CSS bisognare aprire un terminale ede  eseguire i commandi seguenti :
+
+cd /Applications/XAMPP/htdocs/esame2_update4/sitophpsass/Css
+
+sass --watch --style=compressed indexfe.scss indexfe.min.css
+
+
+
+
+

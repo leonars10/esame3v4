@@ -1,0 +1,205 @@
+// Variabili
+@import "variabili";
+@import "header";
+@import "footer";
+
+// Mixin
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-container($max-width) {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  width: 100%; 
+  overflow-x: hidden; 
+  background-color: $color-black; 
+  color: $color-white; 
+  font-family: $font-family3; 
+  line-height: 1.5;
+}
+
+// Sfondo
+.sfondo {
+  background-image: url('Sfondo/Sfondo.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .sfondo-content h2 {
+    font-size: 3.5rem;
+    color: $color-white;
+  }
+}
+
+// Servizi
+.services {
+  background-color: $color-black;
+  padding: 50px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .service-item {
+      display: flex;
+      justify-content: space-between; 
+      align-items: flex-start; 
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba($color-white, 0.5);
+      padding-bottom: 20px;
+
+      .service-title {
+        flex: 1;
+        h3 {
+          font-family: $font-family1;
+          color: $primary-color;
+          font-size: 1.8rem;
+          text-align: left; 
+          margin: 0; 
+        }
+      }
+
+      .service-description {
+        flex: 1.5;
+        display: flex;
+        justify-content: flex-end; 
+        align-items: flex-end; 
+
+        p {
+          max-width: 800px; 
+          font-size: 1rem;
+          color: $color-white;
+          font-family: $font-family1;
+          line-height: 1.8;
+          text-align: left; 
+          margin: 0; 
+        }
+      }
+    }
+  }
+}
+
+  
+
+// Galleria Immagini
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+
+  .gallery-item {
+    width: 100%;
+    max-width: 1200px; 
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius; 
+    }
+
+    .project-name {
+      display: none; 
+    }
+  }
+}
+
+// Media
+@media (max-width: 1500px) {
+  .sfondo {
+    height: 300px;
+
+    .sfondo-content h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .services {
+    padding: 20px;
+
+    .container {
+      max-width: 480px;
+    }
+
+    .service-item {
+      flex-direction: column;
+      padding-bottom: 30px;
+
+      .service-title h3 {
+        font-size: 1.5rem !important;
+      }
+
+      .service-description p {
+        font-size: 0.9rem; 
+        margin-top: 16px!important;
+        margin-bottom: 16px!important;
+      }
+    }
+  }
+
+  .image-gallery {
+    gap: 10px;
+    .gallery-item img {
+      padding: 10 20px;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1921px) {
+  .sfondo {
+    height: 400px !important;
+
+    .sfondo-content {
+      h2 {
+        font-size: 5rem !important;
+      }
+    }
+  }
+
+  .services {
+    h2 {
+      font-size: 2.5rem !important;
+    }
+
+    .service-item {
+      flex-direction: row !important;
+      padding-bottom: 30px !important;
+
+      h3 {
+        font-size: 2rem !important;
+      }
+
+      p {
+        font-size: 1.4rem !important;
+        padding-left: 70px !important;
+        line-height: 1.8 !important;
+        padding-left: 50;
+      }
+    }
+  }
+}

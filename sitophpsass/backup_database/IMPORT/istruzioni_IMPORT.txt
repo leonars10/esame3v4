@@ -1,0 +1,36 @@
+
+Ciao
+
+scompattare il file ZIP nella seguente directory :
+
+/Applications/XAMPP/xamppfiles/htdocs
+
+aprire un TERMINALE ed eseguire i seguenti commandi:
+
+
+cd /Applications/XAMPP/xamppfiles/htdocs/esame3v4/sitophpsass/backup_database/IMPORT
+
+
+/Applications/XAMPP/xamppfiles/bin/mysql -u root -p < create_database_LCWEB_PORTFOLIO_and_user_03112025.sql
+
+
+/Applications/XAMPP/xamppfiles/bin/mysql -uLCWEB_BACKEND01  -p'dcg_Rfv643!fvTb(6369_D' -hlocalhost LCWEB_PORTFOLIO < create_tables_and_data_LCWEB_PORTFOLIO_03112025.sql
+
+
+NUOVO LINK AL SITO:
+
+
+
+http://localhost/esame3v4/sitophpsass
+
+
+
+Per accedere all'area di BACKEND indicata nel menu come AREA RISERVATA 
+bisongna utilizzare le seguenti user e password :
+
+USER: esame3
+PASSWORD :  QWErty12!?
+
+
+
+

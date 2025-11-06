@@ -1,0 +1,372 @@
+// IMPORTS
+@import "variabili";
+@import "header";
+@import "footer";
+
+// STILI GLOBALI
+body {
+  max-width: 100%;
+  background-color: $color-black;
+  color: $color-white;
+  font-family: $font-family1;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// PLACEHOLDER CONTAINER
+%base-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  @extend %base-container;
+}
+
+// SFONDO HOMEPAGE
+.sfondo {
+  background-image: $sfondo-gradient;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 900px;
+  text-align: center;
+
+  .img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
+// SEZIONE SERVIZI
+.services {
+  @extend %base-container;
+  padding-top: $header-padding;
+
+  h2 {
+    font-family: $font-family3;
+    font-size: 2.5rem;
+    color: $color-white;
+    margin-bottom: 20px;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+
+    h3 {
+      flex: 1;
+      font-size: 1.8rem;
+      color: $primary-color;
+      margin: 0;
+    }
+
+    p {
+      flex: 1.5;
+      font-size: 1rem;
+      color: $color-white;
+      padding-left: 30px;
+      line-height: 1.8rem;
+    }
+  }
+}
+
+
+// CONTACT FORM CONTAINER
+.contact-form-contain {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  display: flex;  // Flexbox for centering
+  justify-content: center;// Center horizontally
+  align-items: center; // Center vertically
+  
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 800px;
+    //background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    //box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    //color: $color-white;
+    
+    @extend %base-container;
+  }
+  
+
+// CONTACT FORM
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 1rem;
+    margin-top: 70px;
+    font-family: $font-family3;
+    font-size: 2rem;
+    text-align: center;
+    
+    
+    }
+
+    p {
+      color: $color-white;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      margin: 0%;
+      padding: 10px;
+    }
+
+  form {
+   
+    .form-group,
+    .form-row {
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-family: "Ordina-WideBold";
+      color: $primary-color;
+      width: 100%;
+      }
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      padding-top: 3px;
+      accent-color: $primary-color; // Blu
+      color: #ffffff;
+
+    }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: "Ordina-Wide";
+      font-size: 1em;
+      margin-bottom: 1rem;
+      background: #232323;
+      color: $color-white;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+      cursor: pointer;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      font-family: "Ordina-WideBold";
+      font-size: 1em;
+      color: #000000;
+      padding: 10px;
+      transition: background 0.2s;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .errore-js,
+    .errore-php {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 2px;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    .successo {
+      color: green;
+      font-weight: bold;
+      padding: 10px;
+      border: 1px solid green;
+      background-color: #e6ffe6;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      width: 100%;
+      text-align: center;
+    }
+  
+
+
+// MEDIA QUERIES
+@media (max-width: 1500px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .sfondo {
+    height: 600px;
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
+
+  .services {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .service-item {
+      flex-direction: column;
+      padding-bottom: 20px;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding-left: 0;
+      }
+    }
+  }
+
+.scritte-form {
+  font-size: 1rem;
+}
+
+  .contact-form {
+    padding: 20px;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+       font-size: 1rem;
+     }
+
+    form {
+      .form-row {
+        input,
+        textarea {
+          font-size: 0.9rem;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .container,
+  .contact-form {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .sfondo {
+    height: 800px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .services {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .service-item {
+      flex-direction: row;
+      padding-bottom: 30px;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        padding-left: 30px;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .contact-form {
+    padding: 40px;
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    form {
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .form-row {
+        label {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: $color-white;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+          font-size: 1.5rem;
+          padding: 15px;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+    }
+  }
+}

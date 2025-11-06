@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Ordina-Wide';
+    src: local('Ordina-Wide'), 
+    url('Font/Ordina/Ordina-Wide.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ordina-WideSemibold';
+    src: local('Ordina-WideSemibold'), 
+    url('Font/Ordina/Ordina-WideSemibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ordina-WideBold';
+    src: local('Ordina-WideBold'), 
+    url('Font/Ordina/Ordina-WideBold.ttf') format('truetype');
+}
+
+ 
+ /* CSS per i tasti fissi e non responsive */
+        body {
+            font-family: 'Ordina-Wide', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3b3b3c;
+            color: #3b3b3c;
+            /* Fissa la larghezza per renderlo non responsive */
+            width: 100%; /* Larghezza fissa del layout */
+            margin: 0 auto; /* Centra il layout nel browser */
+        }
+
+        header {
+            background-color:rgb(0, 0, 0);
+            color: #55DBCB;
+            font-size: 1.5em;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+         } 
+
+        p {
+            text-align: center;
+            color: #ffffff;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        .logout-button {
+            color: #55DBCB; 
+            font-size: 0.9em;       
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center; // Centra i bottoni orizzontalmente
+            flex-wrap: wrap; // Permette ai bottoni di andare a capo se necessario
+            gap: 10px; // Spazio tra i bottoni
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        
+
+        .activity-button {
+            background-color: rgb(0, 0, 0);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            padding: 20px;
+            text-align: center;
+            margin: 15px; /* Spazio tra i tasti */
+            width: 280px; /* Larghezza fissa per ogni tasto */
+            height: 330px; /* Altezza fissa per ogni tasto */
+            box-sizing: border-box; /* Include padding e border nella larghezza/altezza */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .activity-button h2 {
+            color: #55DBCB;
+            margin-top: 0;
+            font-size: 1.6em;
+        }
+
+        .activity-button p {
+            color: #ffffff;
+            font-size: 1em;
+            line-height: 1.7;
+            flex-grow: 1; /* Permette alla descrizione di occupare lo spazio disponibile */
+            overflow: hidden; /* Nasconde il testo in eccesso se non ci sta */
+            text-overflow: ellipsis; /* Aggiunge "..." se il testo è troppo lungo */
+        }
+
+        .button-link {
+            display: inline-block;
+            background-color: #55DBCB;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .button-link:hover {
+            background-color: #d36f18;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px; /* Spazio dal container dei tasti */
+        }
