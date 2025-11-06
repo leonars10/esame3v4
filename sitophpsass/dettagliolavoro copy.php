@@ -43,15 +43,12 @@ try {
         // Il primo elemento dei risultati contiene i dettagli del progetto
         $item = [
             'id_progetto' => $json_data[0]['id_progetto'],
-            'alt_immagine_principale' => $json_data[0]['alt_immagine_principale'],
+            'titolo' => $json_data[0]['alt_immagine_principale'],
             'descrizione' => $json_data[0]['descrizione'],
             'tipo' => $json_data[0]['tipo'],
             'immagine_principale' => $json_data[0]['immagine_principale_progetto'],
             'nome_progetto' => $json_data[0]['nome_progetto'],
-            'link_dettaglio' => $json_data[0]['link_dettaglio'],
-            'src_immagine' => $json_data[0]['src_immagine'],
-            'alt_immagine' => $json_data[0]['alt_immagine'],
-            'id_lavoro' => $json_data[0]['id_lavoro']
+            'link_dettaglio' => $json_data[0]['link_dettaglio']
         ];
 
         // Tutte le righe di $json_data rappresentano le immagini della galleria per questo progetto
@@ -77,7 +74,7 @@ try {
 
     <section class="sfondo">
         <div class="sfondo-content">
-            <h2><?= $item ? htmlspecialchars($item['nome_progetto']) : 'Progetto non trovato'; ?></h2>
+            <h2><?= $item ? htmlspecialchars($item['titolo']) : 'Progetto non trovato'; ?></h2>
         </div>
     </section>
 
